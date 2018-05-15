@@ -1,0 +1,29 @@
+$headerColor:#28224E;
+$activeColor:#CC234A;
+$fontColor:#746CA8;
+$headerHeight:55px;
+@mixin flexbox($dir:row) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: center;
+    width: 100%;
+    @content;
+}
+
+@mixin imgResp() {
+    display: block;
+    width: 100%;
+    height: auto;
+    @content;
+}
+
+@mixin pageAbs() {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    @content;
+    background-color: white;
+}
